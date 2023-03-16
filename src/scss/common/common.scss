@@ -1,4 +1,23 @@
+@import "variables.scss";
+
+* {
+    font-family: 'SF-PRO', Times, serif;
+}
+
 .container {
     margin: 0 auto;
-    width: 1170px;
+    padding-inline: 15px ;
+    width: 1140px;
+}
+
+.link {
+    transition: 0.3s;
+    &:hover {
+        color: $hover-color; 
+    }
+
+}
+
+.weight_700 {
+    font-weight: 700;
 }

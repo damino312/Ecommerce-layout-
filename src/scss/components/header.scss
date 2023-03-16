@@ -1,7 +1,7 @@
 .header {
  .head {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr minmax(80px, 285px) 1fr;
     align-items: center;
     .head__item:first-child {
         display: grid;
@@ -15,24 +15,47 @@
         text-align: center;
     }
     .head__item:last-child {
-        &:before {
-            content: url(/src/images/header/address.svg);
-            display: inline-block;
-            position: relative;
+        display: grid;
+        
+        grid-template-columns: 1fr 106px;
+        align-items: center;
+        .head__address {
+                
+            &:before {
+                content: url(/src/images/header/address.svg);
+                display: inline-block;
+                position: relative;
+                
+            }
+            display: inline;
             
         }
-        .head__address {
-            display: inline;
-            margin-right: 86px;
-        }
-        a {
+        .head__links {
             display: inline-block;
-            &:not(:last-child) {
-                margin-right: 10px;
+            a {
+                display: inline-block;
+                &:not(:last-child) {
+                    margin-right: 10px;
+                }
             }
+            
         }
         
     }
-
  }  
+ .menu {
+    
+    margin: 20px 0 0 0;
+    padding: 15px 0 15px 0;
+    display: grid;
+
+    
+    grid-template-columns: repeat(8, 1fr);
+    background-color: #F0F0F4;
+    
+    .menu__item {
+        display: inline-block;
+        justify-self: center;
+    }
+ }
 }
