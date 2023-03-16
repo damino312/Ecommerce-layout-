@@ -1,0 +1,11 @@
+a {
+  text-decoration: none;
+}
+a:visited {
+  color: inherit;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1170px;
+}/*# sourceMappingURL=index.css.map */

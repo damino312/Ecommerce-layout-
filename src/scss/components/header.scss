@@ -1,0 +1,38 @@
+.header {
+ .head {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    .head__item:first-child {
+        display: grid;
+        grid-template-columns: repeat(3,1fr); 
+        row-gap: 50px;
+        a {
+            display: inline ;
+        }
+    }
+    .head__item:nth-child(2) {
+        text-align: center;
+    }
+    .head__item:last-child {
+        &:before {
+            content: url(/src/images/header/address.svg);
+            display: inline-block;
+            position: relative;
+            
+        }
+        .head__address {
+            display: inline;
+            margin-right: 86px;
+        }
+        a {
+            display: inline-block;
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+        
+    }
+
+ }  
+}
