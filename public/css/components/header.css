@@ -1,3 +1,6 @@
+.header {
+  margin-bottom: 78px;
+}
 .header .head {
   display: grid;
   grid-template-columns: 1fr minmax(80px, 285px) 1fr;

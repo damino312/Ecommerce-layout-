@@ -73,3 +73,7 @@ a:visited {
 .weight_700 {
   font-weight: 700;
 }
+
+.dspl-none {
+  display: none;
+}

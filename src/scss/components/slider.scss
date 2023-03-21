@@ -1,0 +1,45 @@
+.slider {
+    margin-bottom: 78px;
+    .container {
+        display: grid;
+            grid-template-columns: 70% 1fr;
+            column-gap: 36px;
+        .slider__body {
+            position: relative;
+            a {    
+                position: absolute;
+                top:50%;            
+                transition: 0.3s;
+                & img {
+                    height: 40px;
+                    &:hover {
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .slider__btn-next {
+                        right: 0px;
+                        transform:translate(-50%, -50%);
+            }
+            .slider__btn-previous {
+                
+                        left:0px;
+                        transform:translate( 50%, -50%);
+
+            }
+            .slider__item {
+                height: 400px;
+                img {
+                    object-fit: cover;
+                    width: 100%;
+                    height: 100%;                    
+                }     
+                
+                     
+                
+            }
+            
+        }
+    }
+    
+}
