@@ -1,3 +1,4 @@
+@import "../common/variables.scss";
 .header {
     margin-bottom: 78px;
  .head {
@@ -41,7 +42,6 @@
             }
             
         }
-        
     }
  }  
  .menu {
@@ -52,7 +52,7 @@
 
     
     grid-template-columns: repeat(8, 1fr);
-    background-color: #F0F0F4;
+    background-color: $base-color;
     
     .menu__item {
         display: inline-block;

@@ -53,6 +53,11 @@ a:visited {
   color: inherit;
 }
 
+button {
+  background-color: white;
+  border: none;
+}
+
 * {
   font-family: "SF-PRO", Times, serif;
 }
@@ -67,7 +72,7 @@ a:visited {
   transition: 0.3s;
 }
 .link:hover {
-  color: rgb(75, 118, 182);
+  color: #1C62CD;
 }
 
 .weight_700 {
@@ -76,4 +81,8 @@ a:visited {
 
 .dspl-none {
   display: none;
+}
+
+.srh_active {
+  background-color: #F0F0F4;
 }

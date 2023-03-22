@@ -12,7 +12,7 @@
   transition: 0.3s;
 }
 .link:hover {
-  color: rgb(75, 118, 182);
+  color: #1C62CD;
 }
 
 .weight_700 {
@@ -21,4 +21,8 @@
 
 .dspl-none {
   display: none;
+}
+
+.srh_active {
+  background-color: #F0F0F4;
 }

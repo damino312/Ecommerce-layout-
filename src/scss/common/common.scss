@@ -13,7 +13,7 @@
 .link {
     transition: 0.3s;
     &:hover {
-        color: $hover-color; 
+        color: $accent-color; 
     }
 
 }
@@ -23,4 +23,8 @@
 }
 .dspl-none {
     display: none;
+}
+
+.srh_active {
+    background-color: $base-color;
 }

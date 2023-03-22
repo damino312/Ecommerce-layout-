@@ -35,12 +35,24 @@ class Slider {
     }  
 }
 
-const slides = document.querySelectorAll('#slide');
-const slideNext = document.querySelector('#slideNext');
-const slidePrev = document.querySelector('#slidePrev');
-
-
+// slider
+const slides = document.querySelectorAll('#slide'); // slide pictures
+const slideNext = document.querySelector('#slideNext'); //btn
+const slidePrev = document.querySelector('#slidePrev'); //btn
 const sliderIndex = new Slider(slides);
 sliderIndex.showSlide(1);
 slideNext.addEventListener('click', sliderIndex.nextSlide);
 slidePrev.addEventListener('click', sliderIndex.prevSlide);
+
+//search 
+const searchItems = document.querySelectorAll('#srhItem');
+searchItems.forEach(element => {
+    element.addEventListener('click', ()=> {
+        searchItems.forEach(elem => {
+            elem.classList.remove('srh_active');
+        });
+        element.classList.toggle('srh_active');
+        document.getElementsByName('search')[0].placeholder = element.textContent; 
+    })
+    
+});
