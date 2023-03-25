@@ -9,3 +9,7 @@ button {
   background-color: white;
   border: none;
 }
+
+p {
+  margin: 0;
+}

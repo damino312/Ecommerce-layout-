@@ -58,6 +58,10 @@ button {
   border: none;
 }
 
+p {
+  margin: 0;
+}
+
 * {
   font-family: "SF-PRO", Times, serif;
 }
