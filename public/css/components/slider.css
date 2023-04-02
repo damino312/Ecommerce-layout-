@@ -1,5 +1,5 @@
 .slider {
-  margin-bottom: 78px;
+  margin-bottom: 80px;
 }
 .slider .container {
   display: grid;
@@ -9,15 +9,18 @@
 .slider .container .slider__body {
   position: relative;
 }
-.slider .container .slider__body a {
+.slider .container .slider__body button {
   position: absolute;
+  padding: 0;
   top: 50%;
   transition: 0.3s;
+  background: transparent;
+  cursor: pointer;
 }
-.slider .container .slider__body a img {
+.slider .container .slider__body button img {
   height: 40px;
 }
-.slider .container .slider__body a img:hover {
+.slider .container .slider__body button img:hover {
   opacity: 0.8;
 }
 .slider .container .slider__body .slider__btn-next {

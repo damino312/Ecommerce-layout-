@@ -1,6 +1,7 @@
 @import "../common/variables.scss";
 
 .product-section {
+    margin-bottom: 80px;
     .product-section__body {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

@@ -6,7 +6,6 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="../../css/index.css" />
-
   </head>
 
   <body>
@@ -51,21 +50,37 @@
       </div>
     </header>
     <section class="slider">
-        <div class="container">
-            <div class="slider__body">
-                <div class="slider__item" id=slide><img src="../../images/slider/slider01.jpg" alt="Slider item"></div>
-                <div class="slider__item" id=slide><img src="../../images/slider/slider02.jpg" alt="Slider item"></div>
-                <div class="slider__item" id=slide><img src="../../images/slider/slider03.jpg" alt="Slider item"></div>
-                <div class="slider__item" id=slide><img src="../../images/slider/slider02.jpg" alt="Slider item"></div>
-                <div class="slider__item" id=slide><img src="../../images/slider/slider01.jpg" alt="Slider item"></div>
-                <div class="slider__item" id=slide><img src="../../images/slider/slider02.jpg" alt="Slider item"></div>
-                <a href="#" class="slider__btn-next" id="slideNext"><img src="../../images/slider/arrow-right.svg" alt="Next slide"></a>
-                <a href="#" class="slider__btn-previous" id="slidePrev"><img src="../../images/slider/arrow-left.svg" alt="Previous slide"></a>
-            </div>
-            <div class="discount">
-                <img src="../../images/slider/discount.jpg" alt="discount">
-            </div>
+      <div class="container">
+        <div class="slider__body">
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider01.jpg" alt="Slider item" />
+          </div>
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider02.jpg" alt="Slider item" />
+          </div>
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider03.jpg" alt="Slider item" />
+          </div>
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider02.jpg" alt="Slider item" />
+          </div>
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider01.jpg" alt="Slider item" />
+          </div>
+          <div class="slider__item" id="slide">
+            <img src="../../images/slider/slider02.jpg" alt="Slider item" />
+          </div>
+          <button class="slider__btn-next" id="slideNext">
+            <img src="../../images/slider/arrow-right.svg" alt="Next slide" />
+          </button>
+          <button class="slider__btn-previous" id="slidePrev">
+            <img src="../../images/slider/arrow-left.svg" alt="Previous slide" />
+          </button>
         </div>
+        <div class="discount">
+          <img src="../../images/slider/discount.jpg" alt="discount" />
+        </div>
+      </div>
     </section>
     <section class="search">
         <div class="container">
@@ -119,9 +134,34 @@
             </div>
         </div>
     </section>
+    
+    <section class="popular-product">
+        <div class="container">
+            <p class="popular-product__title">Популярные товары</p>
+            <ul class="popular-product__sort">
+                <li class="popular-product__item"><a href="#">запчасти</a></li>
+                <li class="popular-product__item"><a href="#">моторы</a></li>
+                <li class="popular-product__item"><a href="#">шины</a></li>
+                <li class="popular-product__item"><a href="#">электроника</a></li>
+                <li class="popular-product__item"><a href="#">инструменты</a></li>
+                <li class="popular-product__item"><a href="#">аксессуары</a></li>
+            </ul>
+            
+            <ul class="product-slider">
+                <li class="product-slider__item">
+                    <a href="#" class="product-slider__link">посмотреть товар</a>
+                    <p class="product-slider__sale">Sale</p>
+                    <button  class="product-slider__btn-favorite"><img src="../../images/popular-product/favorite.svg" alt="Добавить в избранное"></button>
+                    <img src="../../images/popular-product/backpack.jpg" alt="Картинка товара" class="product-slider__img">
+                    <p class="product-slider__name">Водонепроницаемый рюкзак</p>
+                    <p class="product-slider__price">1337</p>
+                    <button  class="product-slider__btn-card"><img src="../../images/popular-product/card.svg" alt="Корзина"></button>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <script src="/public/js/jquery-3.6.4.min.js"></script>
-    <script  src="/public/js/index.js"></script>
+    <script src="/public/js/index.js"></script>
   </body>
-  
 </html>
