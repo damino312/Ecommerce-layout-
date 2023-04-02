@@ -17,8 +17,8 @@ function buildStyles() {
 
 function imageImport() {
   gulp.src('./src/images/**/*')
-		.pipe(imagemin())
-		.pipe(gulp.dest('./public/images'))
+    .pipe(imagemin())
+    .pipe(gulp.dest('./public/images'))
 }
 
 function htmlImport() {
@@ -27,17 +27,17 @@ function htmlImport() {
     .pipe(gulp.dest('./public/pages'));
 }
 
-function jsImport () {
+function jsImport() {
   return gulp.src("./src/js/**/*.js")
-  .pipe(gulp.dest('./public/js'));
+    .pipe(gulp.dest('./public/js'));
 }
 
 gulp.task('watch',
-    function () {
-        watch('./src/scss/**/*.scss',{ ignoreInitial: false },buildStyles);
-        watch('./src/scss/**/*.scss',{ ignoreInitial: false },buildStyles); 
-        watch('./src/pages/**/*.html',{ ignoreInitial: false }, htmlImport);
-        watch('./src/js/**/*.js',{ignoreInitial: false}, jsImport);
-        watch('./src/images/**/*',{ignoreInitial: false}, imageImport);
-    }
+  function () {
+    watch('./src/scss/**/*.scss', { ignoreInitial: false }, buildStyles);
+    watch('./src/scss/**/*.scss', { ignoreInitial: false }, buildStyles);
+    watch('./src/pages/**/*.html', { ignoreInitial: false }, htmlImport);
+    watch('./src/js/**/*.js', { ignoreInitial: false }, jsImport);
+    watch(['./src/images/**/*.svg', './src/images/**/*.png', './src/images/**/*.svg', './src/images/**/*.jpg'], { ignoreInitial: false }, imageImport);
+  }
 );
