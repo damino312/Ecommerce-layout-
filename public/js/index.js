@@ -56,3 +56,29 @@ searchItems.forEach(element => {
     })
     
 });
+//product-slider 
+
+const silderPrice = document.querySelectorAll('#silderPrice');
+const silderOut = document.querySelectorAll('#silderOut');
+const silderInform = document.querySelectorAll('#silderInform');
+const silderCard = document.querySelectorAll('#silderCard');
+silderPrice.forEach(element => {
+    if (element.dataset.productInStore == "false") {
+        element.classList.add("dspl-none");
+    }
+})
+silderOut.forEach(element => {
+    if (element.dataset.productInStore == "true") {
+        element.classList.add("dspl-none");
+    }
+})
+silderInform.forEach(element => {
+    if (element.dataset.productInStore == "true") {
+        element.classList.add("dspl-none");
+    }
+})
+silderCard.forEach(element => {
+    if (element.dataset.productInStore == "false") {
+        element.classList.add("dspl-none");
+    }
+})
