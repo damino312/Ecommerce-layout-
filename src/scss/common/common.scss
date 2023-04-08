@@ -32,3 +32,8 @@ button {
 .srh_active {
     background-color: $base-color;
 }
+
+.pplr-active { 
+    border-bottom: 2px solid $accent-color !important; //overwritting is needed due to exisiting properties
+    padding-bottom: 10px !important; //overwritting is needed due to exisiting properties
+}

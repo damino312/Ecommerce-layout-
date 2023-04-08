@@ -9,7 +9,7 @@ class Slider {
         this.obj = obj;
     }
 
-    showSlide(sliderIndex) { 
+    showSlide(sliderIndex) {
 
         if (sliderIndex > this.obj.length) {
             this.sliderIndex = 1;
@@ -25,14 +25,14 @@ class Slider {
 
     nextSlide = () => {
         this.sliderIndex += 1;
-    this.showSlide(this.sliderIndex);
+        this.showSlide(this.sliderIndex);
 
     }
 
     prevSlide = () => {
         this.sliderIndex -= 1;
         this.showSlide(this.sliderIndex);
-    }  
+    }
 }
 
 // slider
@@ -47,14 +47,14 @@ slidePrev.addEventListener('click', sliderIndex.prevSlide);
 //search 
 const searchItems = document.querySelectorAll('#srhItem');
 searchItems.forEach(element => {
-    element.addEventListener('click', ()=> {
+    element.addEventListener('click', () => {
         searchItems.forEach(elem => {
             elem.classList.remove('srh_active');
         });
         element.classList.toggle('srh_active');
-        document.getElementsByName('search')[0].placeholder = element.textContent; 
+        document.getElementsByName('search')[0].placeholder = element.textContent;
     })
-    
+
 });
 //product-slider 
 
@@ -81,4 +81,18 @@ silderCard.forEach(element => {
     if (element.dataset.productInStore == "false") {
         element.classList.add("dspl-none");
     }
+})
+
+//popular-product 
+
+const popularBtn = document.querySelectorAll("#popularBtn") //selecting a new group
+popularBtn.forEach(element1 => {
+    element1.addEventListener('click', () => {
+        element1.classList.toggle('pplr-active')
+        popularBtn.forEach(element2 => {
+            if (element2 != element1) {
+                element2.classList.remove('pplr-active')
+            }
+        });
+    })
 })

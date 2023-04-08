@@ -12,19 +12,24 @@
         list-style: none;
         padding: 0;
         .popular-product__item {
-            padding-bottom: 10px;
+            
             position: relative;
             display: inline-block;
-            border-bottom: 2px solid transparent;
+            
             font-size: 15px;
             font-weight: 500;
             transition: 0.3s;
             &:not(:last-child) {
                 margin-right: 50px;
             }
-            &:hover {
-                border-bottom: 2px solid $accent-color;
+            .popular-product__item-btn {
+                padding: 0;
                 padding-bottom: 10px;
+                border-bottom: 2px solid transparent;
+                &:hover {
+                    border-bottom: 2px solid $accent-color;
+                    padding-bottom: 10px;
+                }
             }
         }
     }
@@ -147,4 +152,22 @@
             }          
         }
     }
+    .popular-product__more {
+        display: block;
+        text-transform: uppercase;
+        margin: 0 auto;
+        margin-top: 35px;
+        padding: 17px 43px 15px 43px;
+        background-color: $base-color;
+        letter-spacing: 3px;
+        font-size: 15px;
+        transition: 0.3s;
+        &:hover {
+            opacity: 0.8;
+            color: $accent-color;
+        }
+
+
+    }
+    
 }

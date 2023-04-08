@@ -30,3 +30,8 @@ button {
 .srh_active {
   background-color: #F0F0F4;
 }
+
+.pplr-active {
+  border-bottom: 2px solid #1C62CD !important;
+  padding-bottom: 10px !important;
+}
