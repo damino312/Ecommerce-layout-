@@ -74,6 +74,12 @@ button {
   cursor: pointer;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .container {
   margin: 0 auto;
   padding-inline: 15px;

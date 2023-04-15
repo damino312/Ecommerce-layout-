@@ -21,14 +21,14 @@
             }
 
             .discount-banner__link {
-                display: inline-block;
                 --c: white;
+                display: inline-block;
+                width: 14em;
+                height: 3em;
                 color: var(--c);
                 font-size: 16px;
                 border: 0.3em solid var(--c);
                 border-radius: 0.5em;
-                width: 14em;
-                height: 3em;
                 text-transform: uppercase;
                 font-weight: bold;
                 font-family: sans-serif;

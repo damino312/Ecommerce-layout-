@@ -8,16 +8,23 @@ button {
     cursor: pointer;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
 .container {
     margin: 0 auto;
-    padding-inline: 15px ;
+    padding-inline: 15px;
     width: 1140px;
 }
 
 .link {
     transition: 0.3s;
+
     &:hover {
-        color: $accent-color; 
+        color: $accent-color;
     }
 
 }
@@ -25,6 +32,7 @@ button {
 .weight_700 {
     font-weight: 700;
 }
+
 .dspl-none {
     display: none;
 }
@@ -33,7 +41,7 @@ button {
     background-color: $base-color;
 }
 
-.pplr-active { 
+.pplr-active {
     border-bottom: 2px solid $accent-color !important; //overwritting is needed due to exisiting properties
     padding-bottom: 10px !important; //overwritting is needed due to exisiting properties
 }
