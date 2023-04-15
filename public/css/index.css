@@ -287,6 +287,9 @@ button {
   font-size: 14px;
 }
 
+.popular-product {
+  margin-bottom: 76px;
+}
 .popular-product .popular-product__title {
   margin-bottom: 25px;
   font-size: 25px;
@@ -445,4 +448,76 @@ button {
 .popular-product .popular-product__more:hover {
   opacity: 0.8;
   color: #1C62CD;
+}
+
+.discount-banner .discount-banner__body {
+  background-color: #1C62CD;
+  display: grid;
+  grid-template-columns: auto 275px 1fr;
+  gap: 46px;
+}
+.discount-banner .discount-banner__body .discount-banner__item {
+  margin: 26px 0;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__picture:first-child {
+  padding-left: 70px;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__text {
+  color: white;
+  font-weight: 700;
+  font-size: 36px;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link {
+  display: inline-block;
+  --c: white;
+  color: var(--c);
+  font-size: 16px;
+  border: 0.3em solid var(--c);
+  border-radius: 0.5em;
+  width: 14em;
+  height: 3em;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 0.1em;
+  text-align: center;
+  line-height: 3em;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.5s;
+  margin: 1em;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link span {
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: var(--c);
+  transform: translateY(150%);
+  border-radius: 50%;
+  left: calc((var(--n) - 1) * 25%);
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.1s);
+  z-index: -1;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link:hover {
+  color: #1C62CD;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link:hover span {
+  transform: translateY(0) scale(2);
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link span:nth-child(1) {
+  --n: 1;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link span:nth-child(2) {
+  --n: 2;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link span:nth-child(3) {
+  --n: 3;
+}
+.discount-banner .discount-banner__body .discount-banner__item .discount-banner__link span:nth-child(4) {
+  --n: 4;
+}
+.discount-banner .discount-banner__body .discount-banner__item:last-child {
+  align-self: center;
 }
