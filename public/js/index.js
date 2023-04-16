@@ -62,6 +62,7 @@ const silderPrice = document.querySelectorAll('#silderPrice');
 const silderOut = document.querySelectorAll('#silderOut');
 const silderInform = document.querySelectorAll('#silderInform');
 const silderCard = document.querySelectorAll('#silderCard');
+const sliderSale = document.querySelectorAll('#sliderSale')
 silderPrice.forEach(element => {
     if (element.dataset.productInStore == "false") {
         element.classList.add("dspl-none");
@@ -82,6 +83,11 @@ silderCard.forEach(element => {
         element.classList.add("dspl-none");
     }
 })
+sliderSale.forEach(element => {
+    if (element.dataset.isSale == "false") {
+        element.classList.add("dspl-none");
+    }
+})
 
 //popular-product 
 
@@ -96,3 +102,18 @@ popularBtn.forEach(element1 => {
         });
     })
 })
+
+//similar-product 
+
+const similarBtn = document.querySelectorAll("#similarBtn") //selecting a new group
+popularBtn.forEach(element1 => {
+    element1.addEventListener('click', () => {
+        element1.classList.toggle('pplr-active')
+        popularBtn.forEach(element2 => {
+            if (element2 != element1) {
+                element2.classList.remove('pplr-active')
+            }
+        });
+    })
+})
+

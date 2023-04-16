@@ -1,0 +1,148 @@
+@charset "UTF-8";
+.similar-product {
+  margin-top: 72px;
+  margin-bottom: 76px;
+}
+.similar-product .similar-product__title {
+  margin-bottom: 25px;
+  font-size: 25px;
+  font-weight: 700;
+}
+.similar-product .similar-product__sort {
+  margin-bottom: 13px;
+  list-style: none;
+  padding: 0;
+}
+.similar-product .similar-product__sort .similar-product__item {
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.similar-product .similar-product__sort .similar-product__item:not(:last-child) {
+  margin-right: 50px;
+}
+.similar-product .similar-product__sort .similar-product__item .similar-product__item-btn {
+  padding: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid transparent;
+}
+.similar-product .similar-product__sort .similar-product__item .similar-product__item-btn:hover {
+  border-bottom: 2px solid #1C62CD;
+  padding-bottom: 10px;
+}
+.similar-product .product-slider {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+.similar-product .product-slider .product-slider__item {
+  display: flex;
+  position: relative;
+  height: 402px;
+  border: 1px solid #CDCDCD;
+  border-radius: 5px;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+  overflow: hidden;
+}
+.similar-product .product-slider .product-slider__item:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.similar-product .product-slider .product-slider__item:hover .product-slider__link {
+  transform: translateY(122px);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  opacity: 0.9;
+}
+.similar-product .product-slider .product-slider__item:hover .product-slider__name {
+  color: #1C62CD;
+}
+.similar-product .product-slider .product-slider__item:hover .product-slider__price {
+  color: #1C62CD;
+}
+.similar-product .product-slider .product-slider__item .product-slider__link {
+  position: absolute;
+  padding: 20px 18px;
+  transition: 0.4s ease;
+  opacity: 0;
+  transform: translateY(340px);
+}
+.similar-product .product-slider .product-slider__item .product-slider__link:hover {
+  color: #1C62CD;
+}
+.similar-product .product-slider .product-slider__item .product-slider__sale {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 6px 16px;
+  font-size: 12px;
+  color: white;
+  background-color: #1C62CD;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-favorite {
+  margin: 10px 7px 0 0;
+  padding: 9px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-favorite svg path {
+  transition: 0.3s;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-favorite:hover svg path {
+  fill: red;
+}
+.similar-product .product-slider .product-slider__item .product-slider__img {
+  margin: 52px 0 14px 0;
+  width: 200px;
+  height: 200px;
+}
+.similar-product .product-slider .product-slider__item .product-slider__name {
+  width: 200px;
+  text-align: center;
+  margin-bottom: 25px;
+  transition: 0.3s;
+}
+.similar-product .product-slider .product-slider__item .product-slider__price {
+  font-size: 30px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.similar-product .product-slider .product-slider__item .product-slider__price:after {
+  content: " ₽";
+  font-size: 30px;
+  font-weight: 700;
+}
+.similar-product .product-slider .product-slider__item .product-slider__out {
+  margin-bottom: 12px;
+  font-size: 18;
+  font-weight: 700;
+}
+.similar-product .product-slider .product-slider__item .product-slider__inform {
+  color: #1C62CD;
+  border-bottom: 1px solid #1C62CD;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-card {
+  padding: 10px 16px 6px 14px;
+  border-radius: 10px 0 0 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #1C62CD;
+  transition: 0.3s;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-card svg path {
+  transition: 0.3s;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-card:hover svg path {
+  fill: #1C62CD;
+}
+.similar-product .product-slider .product-slider__item .product-slider__btn-card:hover {
+  background-color: white;
+}
