@@ -106,10 +106,10 @@ popularBtn.forEach(element1 => {
 //similar-product 
 
 const similarBtn = document.querySelectorAll("#similarBtn") //selecting a new group
-popularBtn.forEach(element1 => {
+similarBtn.forEach(element1 => {
     element1.addEventListener('click', () => {
         element1.classList.toggle('pplr-active')
-        popularBtn.forEach(element2 => {
+        similarBtn.forEach(element2 => {
             if (element2 != element1) {
                 element2.classList.remove('pplr-active')
             }
