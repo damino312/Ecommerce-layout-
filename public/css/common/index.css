@@ -53,6 +53,10 @@ a:visited {
   color: inherit;
 }
 
+body {
+  margin: 0;
+}
+
 button {
   background-color: white;
   border: none;
@@ -63,11 +67,12 @@ p {
 }
 
 a {
-  color: black;
+  color: #2F3035;
 }
 
 * {
   font-family: "SF-PRO", Times, serif;
+  color: #2F3035;
 }
 
 button {

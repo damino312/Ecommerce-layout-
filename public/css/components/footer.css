@@ -1,4 +1,95 @@
-p {
-  color: green;
-  font-style: 16px;
+.footer {
+  background-color: #F0F0F4;
+}
+.footer .footer__grid {
+  padding-top: 42px;
+  padding-bottom: 46px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer .footer__grid .email-signup h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 14px;
+  margin-bottom: 34px;
+  width: 220px;
+}
+.footer .footer__grid .email-signup .email-signup__form .email-signup__field {
+  padding: 0;
+  padding-left: 12px;
+  display: inline-block;
+  width: 185px;
+  height: 34px;
+  border: none;
+  outline: none;
+}
+.footer .footer__grid .email-signup .email-signup__form .email-signup__field::placeholder {
+  color: #C4C4C4;
+}
+.footer .footer__grid .email-signup .email-signup__form .email-signup__btn {
+  padding: 0;
+  height: 34px;
+  width: 110px;
+  background-color: #1C62CD;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+.footer .footer__grid .email-signup .email-signup__form .email-signup__btn:hover {
+  opacity: 0.8;
+}
+.footer .footer__grid .bottom-menu {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footer .footer__grid .bottom-menu .bottom-menu__item {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.footer .footer__grid .bottom-menu .bottom-menu__item li {
+  transition: 0.3s;
+}
+.footer .footer__grid .bottom-menu .bottom-menu__item li:first-child {
+  font-weight: 700;
+  font-size: 14px;
+}
+.footer .footer__grid .bottom-menu .bottom-menu__item li:not(:first-child) {
+  margin-top: 8px;
+}
+.footer .footer__grid .bottom-menu .bottom-menu__item li:not(:first-child):hover {
+  color: #1C62CD;
+}
+.footer .footer__grid .link-icon {
+  align-self: center;
+  justify-self: center;
+}
+.footer .footer__grid .link-icon .link-icon:not(:last-child) {
+  margin-right: 30px;
+}
+.footer .footer__grid .link-icon .link-icon svg path {
+  transition: 0.3s;
+}
+.footer .footer__grid .link-icon .link-icon:hover svg path {
+  fill: #1C62CD;
+}
+.footer .footer__info {
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  font-weight: 400;
+  font-size: 10px;
+}
+.footer .footer__info a {
+  transition: 0.3s;
+}
+.footer .footer__info a:hover {
+  color: #1C62CD;
 }

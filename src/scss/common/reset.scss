@@ -1,19 +1,26 @@
-a{
-text-decoration: none;
-&:visited {
-    color: inherit;
+@import "../common/variables.scss";
+
+a {
+    text-decoration: none;
+
+    &:visited {
+        color: inherit;
+    }
 }
+
+body {
+    margin: 0;
 }
 
 button {
     background-color: white;
     border: none;
 }
+
 p {
     margin: 0;
 }
 
 a {
-    color: black;
+    color: $basic-color;
 }
-

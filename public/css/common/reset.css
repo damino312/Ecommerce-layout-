@@ -5,6 +5,10 @@ a:visited {
   color: inherit;
 }
 
+body {
+  margin: 0;
+}
+
 button {
   background-color: white;
   border: none;
@@ -15,5 +19,5 @@ p {
 }
 
 a {
-  color: black;
+  color: #2F3035;
 }
