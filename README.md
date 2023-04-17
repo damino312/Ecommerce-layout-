@@ -8,6 +8,7 @@ SASS, GULP, BEM, VANILLA JS
 What is required:
 -replace the img SVGs in the header with code 
 -wrap the other img into <picture> and give it srcset 2x img 
+-fix the location of the button in the footer 
 
 
 
