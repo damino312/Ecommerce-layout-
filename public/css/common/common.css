@@ -16,7 +16,7 @@ img {
 .container {
   margin: 0 auto;
   padding-inline: 15px;
-  width: 1140px;
+  max-width: 1140px;
 }
 
 .link {
