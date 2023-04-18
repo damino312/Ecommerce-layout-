@@ -39,6 +39,12 @@
 .header .head .head__item:last-child .head__links a:not(:last-child) {
   margin-right: 10px;
 }
+.header .head .head__item:last-child .head__links a svg path {
+  transition: 0.3s;
+}
+.header .head .head__item:last-child .head__links a:hover svg path {
+  fill: #1C62CD;
+}
 .header .menu {
   margin: 20px 0 0 0;
   padding: 15px 0 15px 0;

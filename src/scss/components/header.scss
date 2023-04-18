@@ -1,62 +1,82 @@
 @import "../common/variables.scss";
+
 .header {
     margin-bottom: 80px;
- .head {
-    display: grid;
-    grid-template-columns: 1fr minmax(80px, 285px) 1fr;
-    align-items: center;
-    .head__item:first-child {
-        display: grid;
-        grid-template-columns: repeat(3,1fr); 
-        row-gap: 50px;
-        a {
-            display: inline ;
-        }
-    }
-    .head__item:nth-child(2) {
-        text-align: center;
-    }
-    .head__item:last-child {
-        display: grid;
-        
-        grid-template-columns: 1fr 106px;
-        align-items: center;
-        .head__address {
-                
-            &:before {
-                content: url(/src/images/header/address.svg);
-                display: inline-block;
-                position: relative;
-                
-            }
-            display: inline;
-            
-        }
-        .head__links {
-            display: inline-block;
-            a {
-                display: inline-block;
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
-            }
-            
-        }
-    }
- }  
- .menu {
-    
-    margin: 20px 0 0 0;
-    padding: 15px 0 15px 0;
-    display: grid;
 
-    
-    grid-template-columns: repeat(8, 1fr);
-    background-color: $base-color;
-    
-    .menu__item {
-        display: inline-block;
-        justify-self: center;
+    .head {
+        display: grid;
+        grid-template-columns: 1fr minmax(80px, 285px) 1fr;
+        align-items: center;
+
+        .head__item:first-child {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 50px;
+
+            a {
+                display: inline;
+            }
+        }
+
+        .head__item:nth-child(2) {
+            text-align: center;
+        }
+
+        .head__item:last-child {
+            display: grid;
+
+            grid-template-columns: 1fr 106px;
+            align-items: center;
+
+            .head__address {
+
+                &:before {
+                    content: url(/src/images/header/address.svg);
+                    display: inline-block;
+                    position: relative;
+
+                }
+
+                display: inline;
+
+            }
+
+            .head__links {
+                display: inline-block;
+
+                a {
+                    display: inline-block;
+
+                    &:not(:last-child) {
+                        margin-right: 10px;
+                    }
+
+                    svg path {
+                        transition: 0.3s;
+                    }
+
+                    &:hover svg path {
+                        fill: $accent-color;
+                    }
+                }
+
+            }
+        }
     }
- }
+
+    .menu {
+
+        margin: 20px 0 0 0;
+        padding: 15px 0 15px 0;
+        display: grid;
+
+
+        grid-template-columns: repeat(8, 1fr);
+        background-color: $base-color;
+
+        .menu__item {
+            display: inline-block;
+            justify-self: center;
+        }
+    }
 }
