@@ -1,6 +1,7 @@
 @import "../common/variables.scss";
 
 .header {
+    margin-top: 25px;
     margin-bottom: 80px;
 
     .head {
@@ -8,7 +9,33 @@
         grid-template-columns: 1fr minmax(80px, 285px) 1fr;
         align-items: center;
 
-        .head__item:first-child {
+        .head__burger-btn {
+            position: relative;
+            width: 34px;
+            height: 28px;
+            border: none;
+            background-color: aqua;
+            display: none;
+
+            span {
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background-color: black;
+                left: 2px;
+                border-radius: 2px;
+
+                &:nth-child(1) {
+                    transform: translateY(13px);
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(25px);
+                }
+            }
+        }
+
+        .head__item:nth-child(2) {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             row-gap: 50px;
@@ -18,7 +45,7 @@
             }
         }
 
-        .head__item:nth-child(2) {
+        .head__item:nth-child(3) {
             text-align: center;
         }
 
@@ -80,3 +107,5 @@
         }
     }
 }
+
+@media (max-width: 992px) {}
