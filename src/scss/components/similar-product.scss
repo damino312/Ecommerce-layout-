@@ -16,6 +16,8 @@
         list-style: none;
         padding: 0;
 
+        justify-content: space-between;
+
         .similar-product__item {
 
             position: relative;
@@ -44,4 +46,100 @@
 
     @include product-slider;
 
+}
+
+@media (max-width: 886px) {
+    .similar-product {
+        margin-top: 40px;
+        margin-bottom: 60px;
+
+        .similar-product__title {
+            margin-bottom: 25px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .similar-product__sort {
+            margin-bottom: 13px;
+            list-style: none;
+            padding: 0;
+
+            .similar-product__item {
+
+                position: relative;
+                display: inline-block;
+
+                font-size: 15px;
+                font-weight: 500;
+                transition: 0.3s;
+
+                &:not(:last-child) {
+                    margin-right: 50px;
+                }
+
+                .similar-product__item-btn {
+                    padding: 0;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        border-bottom: 2px solid $accent-color;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        @include product-slider;
+
+    }
+}
+
+@media (max-width: 686px) {
+    .similar-product {
+        margin-top: 40px;
+        margin-bottom: 60px;
+
+        .similar-product__title {
+            margin-bottom: 25px;
+            font-size: 25px;
+            font-weight: 700;
+        }
+
+        .similar-product__sort {
+            display: flex;
+            overflow-x: auto;
+            margin-bottom: 13px;
+            list-style: none;
+            padding: 0;
+
+            .similar-product__item {
+
+                position: relative;
+                display: inline-block;
+
+                font-size: 15px;
+                font-weight: 500;
+                transition: 0.3s;
+
+                &:not(:last-child) {
+                    margin-right: 50px;
+                }
+
+                .similar-product__item-btn {
+                    padding: 0;
+                    padding-bottom: 10px;
+                    border-bottom: 2px solid transparent;
+
+                    &:hover {
+                        border-bottom: 2px solid $accent-color;
+                        padding-bottom: 10px;
+                    }
+                }
+            }
+        }
+
+        @include product-slider;
+
+    }
 }

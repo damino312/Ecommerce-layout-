@@ -126,3 +126,15 @@
   font-weight: 700;
   color: #1C62CD;
 }
+
+@media (max-width: 886px) {
+  .slider {
+    margin-bottom: 40px;
+  }
+  .slider .container {
+    display: block;
+  }
+  .slider .container .discount {
+    display: none;
+  }
+}

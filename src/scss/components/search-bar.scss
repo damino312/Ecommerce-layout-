@@ -1,48 +1,175 @@
 @import "../common/variables.scss";
+
 .search {
     margin-bottom: 80px;
+
     .search__type {
         margin-bottom: 25px;
+
         .search__item {
             display: inline-block;
             padding: 11px 26px;
             border-radius: 5px;
+
             &:hover {
                 background-color: $base-color;
             }
-            
+
         }
     }
+
     .search__bar {
         .search__form {
             display: flex;
-        grid-template-columns: 1fr 145px;
-        input {
-            width: 100%;
-            height: 50px;
-            background-color: $base-color;
-            border: none;
-            &::placeholder {
-                padding-left: 20px;
-                color: #656464;
+            grid-template-columns: 1fr 145px;
+
+            input {
+                width: 100%;
+                height: 50px;
+                background-color: $base-color;
+                border: none;
+
+                &::placeholder {
+                    padding-left: 20px;
+                    color: #656464;
+                }
             }
-        } 
-        .search__btn {
-            border: none;
-            padding: 16px 40px;
-            font-weight: 700;
-            color: #FFFF;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            background-color: $accent-color;
-            transition: 0.3s;
-            cursor: pointer;
-            &:hover {
-                opacity: 0.8;
+
+            .search__btn {
+                border: none;
+                padding: 16px 40px;
+                font-weight: 700;
+                color: #FFFF;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                background-color: $accent-color;
+                transition: 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    opacity: 0.8;
+                }
+
+            }
+        }
+
+    }
+}
+
+@media (max-width: 886px) {
+    .search {
+        margin-bottom: 40px;
+
+        .search__type {
+            margin-bottom: 25px;
+
+            .search__item {
+                display: inline-block;
+                padding: 11px 26px;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $base-color;
+                }
+
+            }
+        }
+
+        .search__bar {
+            .search__form {
+                display: flex;
+                grid-template-columns: 1fr 145px;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    background-color: $base-color;
+                    border: none;
+
+                    &::placeholder {
+                        padding-left: 20px;
+                        color: #656464;
+                    }
+                }
+
+                .search__btn {
+                    border: none;
+                    padding: 16px 40px;
+                    font-weight: 700;
+                    color: #FFFF;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background-color: $accent-color;
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                }
             }
 
         }
+    }
+}
+
+@media (max-width: 576px) {
+    .search {
+        margin-bottom: 40px;
+
+        .search__type {
+            margin-bottom: 25px;
+            overflow-x: auto;
+            display: flex;
+
+            .search__item {
+                display: inline-block;
+                padding: 11px 26px;
+                border-radius: 5px;
+
+                &:hover {
+                    background-color: $base-color;
+                }
+
+            }
         }
-        
+
+        .search__bar {
+            .search__form {
+                display: flex;
+                grid-template-columns: 1fr 145px;
+
+                input {
+                    width: 100%;
+                    height: 50px;
+                    background-color: $base-color;
+                    border: none;
+
+                    &::placeholder {
+                        padding-left: 20px;
+                        color: #656464;
+                    }
+                }
+
+                .search__btn {
+                    border: none;
+                    padding: 16px 40px;
+                    font-weight: 700;
+                    color: #FFFF;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    background-color: $accent-color;
+                    transition: 0.3s;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.8;
+                    }
+
+                }
+            }
+
+        }
     }
 }

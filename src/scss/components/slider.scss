@@ -158,3 +158,20 @@
     }
 
 }
+
+
+@media (max-width: 886px) {
+    .slider {
+        margin-bottom: 40px;
+
+        .container {
+            display: block;
+
+            .discount {
+                display: none;
+            }
+        }
+    }
+
+
+}
