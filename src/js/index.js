@@ -46,12 +46,15 @@ slidePrev.addEventListener('click', sliderIndex.prevSlide);
 
 //search 
 const searchItems = document.querySelectorAll('#srhItem');
+
 searchItems.forEach(element => {
     element.addEventListener('click', () => {
         searchItems.forEach(elem => {
             elem.classList.remove('srh_active');
         });
         element.classList.toggle('srh_active');
+
+
         document.getElementsByName('search')[0].placeholder = element.textContent;
     })
 

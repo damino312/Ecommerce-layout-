@@ -38,6 +38,13 @@ img {
   background-color: #F0F0F4;
 }
 
+@media (max-width: 576px) {
+  .srh_active {
+    border-radius: 0px !important;
+    background-color: white;
+    border-bottom: 2px solid #1C62CD !important;
+  }
+}
 .pplr-active {
   border-bottom: 2px solid #1C62CD !important;
   padding-bottom: 10px !important;

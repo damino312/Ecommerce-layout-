@@ -42,6 +42,14 @@ img {
     background-color: $base-color;
 }
 
+@media (max-width: 576px) {
+    .srh_active {
+        border-radius: 0px !important;
+        background-color: white;
+        border-bottom: 2px solid $accent-color !important;
+    }
+}
+
 .pplr-active {
     border-bottom: 2px solid $accent-color !important; //overwritting is needed due to exisiting properties
     padding-bottom: 10px !important; //overwritting is needed due to exisiting properties

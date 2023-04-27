@@ -10,6 +10,7 @@
             display: inline-block;
             padding: 11px 26px;
             border-radius: 5px;
+            white-space: nowrap;
 
             &:hover {
                 background-color: $base-color;
@@ -38,13 +39,23 @@
             .search__btn {
                 border: none;
                 padding: 16px 40px;
-                font-weight: 700;
-                color: #FFFF;
-                letter-spacing: 2px;
-                text-transform: uppercase;
+                
+                
                 background-color: $accent-color;
                 transition: 0.3s;
                 cursor: pointer;
+
+                .search__btn-text {
+                    letter-spacing: 2px;
+                text-transform: uppercase;
+                color: #FFFF;
+                
+                font-weight: 700;
+                }
+
+                svg {
+                    display: none;
+                }
 
                 &:hover {
                     opacity: 0.8;
@@ -125,11 +136,13 @@
 
             .search__item {
                 display: inline-block;
-                padding: 11px 26px;
+                padding: 0 0 10px 0;
+                margin: 11px 26px;
                 border-radius: 5px;
+                border-bottom: 2px solid transparent;
 
                 &:hover {
-                    background-color: $base-color;
+                    background-color: white;
                 }
 
             }
@@ -137,8 +150,9 @@
 
         .search__bar {
             .search__form {
-                display: flex;
-                grid-template-columns: 1fr 145px;
+                display: block;
+                position: relative;
+                
 
                 input {
                     width: 100%;
@@ -147,25 +161,45 @@
                     border: none;
 
                     &::placeholder {
-                        padding-left: 20px;
+                        padding-left: 16px;
                         color: #656464;
                     }
                 }
 
                 .search__btn {
-                    border: none;
-                    padding: 16px 40px;
-                    font-weight: 700;
-                    color: #FFFF;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    background-color: $accent-color;
-                    transition: 0.3s;
-                    cursor: pointer;
+                    position: absolute;
+                    padding: 0;
+                    top: 50%;
+                    right: 0;
+                    transform:translate(0, -50%);
+                    padding: 10px;
+                   
+                    
 
-                    &:hover {
-                        opacity: 0.8;
+
+                    background-color: transparent;
+                    letter-spacing: 2px;
+
+                    .search__btn-text {
+                        display: none;
                     }
+                    svg {
+                        display: block;
+
+                        path {
+                            transition: 0.3s;
+                        }
+        
+                        &:hover path {
+                            fill: $accent-color;
+                        }
+                        
+                    }
+
+
+
+
+
 
                 }
             }

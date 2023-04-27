@@ -8,6 +8,7 @@
   display: inline-block;
   padding: 11px 26px;
   border-radius: 5px;
+  white-space: nowrap;
 }
 .search .search__type .search__item:hover {
   background-color: #F0F0F4;
@@ -29,13 +30,18 @@
 .search .search__bar .search__form .search__btn {
   border: none;
   padding: 16px 40px;
-  font-weight: 700;
-  color: white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   background-color: #1C62CD;
   transition: 0.3s;
   cursor: pointer;
+}
+.search .search__bar .search__form .search__btn .search__btn-text {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+}
+.search .search__bar .search__form .search__btn svg {
+  display: none;
 }
 .search .search__bar .search__form .search__btn:hover {
   opacity: 0.8;
@@ -96,15 +102,17 @@
   }
   .search .search__type .search__item {
     display: inline-block;
-    padding: 11px 26px;
+    padding: 0 0 10px 0;
+    margin: 11px 26px;
     border-radius: 5px;
+    border-bottom: 2px solid transparent;
   }
   .search .search__type .search__item:hover {
-    background-color: #F0F0F4;
+    background-color: white;
   }
   .search .search__bar .search__form {
-    display: flex;
-    grid-template-columns: 1fr 145px;
+    display: block;
+    position: relative;
   }
   .search .search__bar .search__form input {
     width: 100%;
@@ -113,21 +121,29 @@
     border: none;
   }
   .search .search__bar .search__form input::placeholder {
-    padding-left: 20px;
+    padding-left: 16px;
     color: #656464;
   }
   .search .search__bar .search__form .search__btn {
-    border: none;
-    padding: 16px 40px;
-    font-weight: 700;
-    color: white;
+    position: absolute;
+    padding: 0;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+    padding: 10px;
+    background-color: transparent;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    background-color: #1C62CD;
-    transition: 0.3s;
-    cursor: pointer;
   }
-  .search .search__bar .search__form .search__btn:hover {
-    opacity: 0.8;
+  .search .search__bar .search__form .search__btn .search__btn-text {
+    display: none;
+  }
+  .search .search__bar .search__form .search__btn svg {
+    display: block;
+  }
+  .search .search__bar .search__form .search__btn svg path {
+    transition: 0.3s;
+  }
+  .search .search__bar .search__form .search__btn svg:hover path {
+    fill: #1C62CD;
   }
 }
