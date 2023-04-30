@@ -1,426 +1,168 @@
 @mixin product-slider {
+  .product-slider {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px;
+
+    .product-slider__item {
+      display: flex;
+      position: relative;
+      height: 402px;
+      border: 1px solid #cdcdcd;
+      border-radius: 5px;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.3s;
+      overflow: hidden;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        & .product-slider__link {
+          transform: translateY(122px);
+          background-color: #ffff;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          opacity: 0.9;
+        }
+
+        & .product-slider__name {
+          color: $accent-color;
+        }
+
+        & .product-slider__price {
+          color: $accent-color;
+        }
+      }
+
+      .product-slider__link {
+        position: absolute;
+        padding: 20px 18px;
+        transition: 0.4s ease;
+        opacity: 0;
+        transform: translateY(340px);
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      .product-slider__sale {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 6px 16px;
+        font-size: 12px;
+        color: white;
+        background-color: $accent-color;
+      }
+
+      .product-slider__btn-favorite {
+        margin: 10px 7px 0 0;
+        padding: 9px;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        svg path {
+          transition: 0.3s;
+        }
+
+        &:hover svg path {
+          fill: $accent-color;
+        }
+      }
+
+      .product-slider__img {
+        margin: 52px 0 14px 0;
+        width: 200px;
+        height: 200px;
+      }
+
+      .product-slider__name {
+        width: 200px;
+        text-align: center;
+        margin-bottom: 25px;
+        transition: 0.3s;
+      }
+
+      .product-slider__price {
+        font-size: 30px;
+        font-weight: 700;
+        transition: 0.3s;
+
+        &:after {
+          content: " ₽";
+          font-size: 30px;
+          font-weight: 700;
+        }
+      }
+
+      .product-slider__out {
+        margin-bottom: 12px;
+        font-size: 18;
+        font-weight: 700;
+      }
+
+      .product-slider__inform {
+        color: $accent-color;
+        border-bottom: 1px solid $accent-color;
+      }
+
+      .product-slider__btn-card {
+        padding: 10px 16px 6px 14px;
+        border-radius: 10px 0 0 0;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $accent-color;
+        transition: 0.3s;
+
+        svg path {
+          transition: 0.3s;
+        }
+
+        &:hover svg path {
+          fill: $accent-color;
+        }
+
+        &:hover {
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
     .product-slider {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        gap: 30px;
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
 
-        .product-slider__item {
-            display: flex;
-            position: relative;
-            height: 402px;
-            border: 1px solid #CDCDCD;
-            border-radius: 5px;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.3s;
-            overflow: hidden;
-
-            &:hover {
-                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-                & .product-slider__link {
-                    transform: translateY(122px);
-                    background-color: #FFFF;
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                    opacity: 0.9;
-                }
-
-                & .product-slider__name {
-                    color: $accent-color;
-                }
-
-                & .product-slider__price {
-                    color: $accent-color;
-                }
-            }
-
-            .product-slider__link {
-                position: absolute;
-                padding: 20px 18px;
-                transition: 0.4s ease;
-                opacity: 0;
-                transform: translateY(340px);
-
-                &:hover {
-                    color: $accent-color;
-                }
-            }
-
-            .product-slider__sale {
-                position: absolute;
-                top: 0;
-                left: 0;
-                padding: 6px 16px;
-                font-size: 12px;
-                color: white;
-                background-color: $accent-color;
-
-            }
-
-            .product-slider__btn-favorite {
-                margin: 10px 7px 0 0;
-                padding: 9px;
-                position: absolute;
-                top: 0;
-                right: 0;
-
-                svg path {
-                    transition: 0.3s;
-                }
-
-                &:hover svg path {
-                    fill: $accent-color;
-                }
-            }
-
-            .product-slider__img {
-
-                margin: 52px 0 14px 0;
-                width: 200px;
-                height: 200px;
-            }
-
-            .product-slider__name {
-                width: 200px;
-                text-align: center;
-                margin-bottom: 25px;
-                transition: .3s;
-            }
-
-            .product-slider__price {
-                font-size: 30px;
-                font-weight: 700;
-                transition: .3s;
-
-                &:after {
-                    content: " ₽";
-                    font-size: 30px;
-                    font-weight: 700;
-                }
-            }
-
-            .product-slider__out {
-                margin-bottom: 12px;
-                font-size: 18;
-                font-weight: 700;
-            }
-
-            .product-slider__inform {
-                color: $accent-color;
-                border-bottom: 1px solid $accent-color;
-            }
-
-            .product-slider__btn-card {
-                padding: 10px 16px 6px 14px;
-                border-radius: 10px 0 0 0;
-                position: absolute;
-                bottom: 0;
-                right: 0;
-                background-color: $accent-color;
-                transition: 0.3s;
-
-                svg path {
-                    transition: 0.3s;
-                }
-
-                &:hover svg path {
-                    fill: $accent-color;
-                }
-
-                &:hover {
-                    background-color: white;
-                }
-
-            }
-        }
+      .product-slider__item {
+        width: 400px;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+      }
     }
+  }
 
-    @media (max-width: 992px) {
-        .product-slider {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 50px;
-
-            .product-slider__item {
-                display: flex;
-                position: relative;
-                height: 402px;
-                border: 1px solid #CDCDCD;
-                border-radius: 5px;
-                flex-direction: column;
-                align-items: center;
-                transition: 0.3s;
-                overflow: hidden;
-
-                &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-                    & .product-slider__link {
-                        transform: translateY(122px);
-                        background-color: #FFFF;
-                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                        opacity: 0.9;
-                    }
-
-                    & .product-slider__name {
-                        color: $accent-color;
-                    }
-
-                    & .product-slider__price {
-                        color: $accent-color;
-                    }
-                }
-
-                .product-slider__link {
-                    position: absolute;
-                    padding: 20px 18px;
-                    transition: 0.4s ease;
-                    opacity: 0;
-                    transform: translateY(340px);
-
-                    &:hover {
-                        color: $accent-color;
-                    }
-                }
-
-                .product-slider__sale {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 6px 16px;
-                    font-size: 12px;
-                    color: white;
-                    background-color: $accent-color;
-
-                }
-
-                .product-slider__btn-favorite {
-                    margin: 10px 7px 0 0;
-                    padding: 9px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-
-                    svg path {
-                        transition: 0.3s;
-                    }
-
-                    &:hover svg path {
-                        fill: $accent-color;
-                    }
-                }
-
-                .product-slider__img {
-
-                    margin: 52px 0 14px 0;
-                    width: 200px;
-                    height: 200px;
-                }
-
-                .product-slider__name {
-                    width: 200px;
-                    text-align: center;
-                    margin-bottom: 25px;
-                    transition: .3s;
-                }
-
-                .product-slider__price {
-                    font-size: 22px;
-                    font-weight: 700;
-                    transition: .3s;
-
-                    &:after {
-                        content: " ₽";
-                        font-size: 30px;
-                        font-weight: 700;
-                    }
-                }
-
-                .product-slider__out {
-                    margin-bottom: 12px;
-                    font-size: 15px;
-                    font-weight: 700;
-                }
-
-                .product-slider__inform {
-                    font-size: 14px;
-                    color: $accent-color;
-                    border-bottom: 1px solid $accent-color;
-                }
-
-                .product-slider__btn-card {
-                    padding: 10px 16px 6px 14px;
-                    border-radius: 10px 0 0 0;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    background-color: $accent-color;
-                    transition: 0.3s;
-
-                    svg path {
-                        transition: 0.3s;
-                    }
-
-                    &:hover svg path {
-                        fill: $accent-color;
-                    }
-
-                    &:hover {
-                        background-color: white;
-                    }
-
-                }
-            }
-        }
+  @media (max-width: 886px) {
+    .product-slider {
+      .product-slider__item {
+        width: 100%;
+      }
     }
+  }
+  @media (max-width: 576px) {
+    .product-slider {
+      grid-template-columns: 1fr;
 
-    @media (max-width: 886px) {
-        .product-slider {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-
-            .product-slider__item {
-                display: flex;
-                position: relative;
-                height: 402px;
-                border: 1px solid #CDCDCD;
-                border-radius: 5px;
-                flex-direction: column;
-                align-items: center;
-                transition: 0.3s;
-                overflow: hidden;
-
-                &:hover {
-                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-                    & .product-slider__link {
-                        transform: translateY(122px);
-                        background-color: #FFFF;
-                        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                        opacity: 0.9;
-                    }
-
-                    & .product-slider__name {
-                        color: $accent-color;
-                    }
-
-                    & .product-slider__price {
-                        color: $accent-color;
-                    }
-                }
-
-                .product-slider__link {
-                    position: absolute;
-                    padding: 20px 18px;
-                    transition: 0.4s ease;
-                    opacity: 0;
-                    transform: translateY(340px);
-
-                    &:hover {
-                        color: $accent-color;
-                    }
-                }
-
-                .product-slider__sale {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    padding: 6px 16px;
-                    font-size: 12px;
-                    color: white;
-                    background-color: $accent-color;
-
-                }
-
-                .product-slider__btn-favorite {
-                    margin: 10px 7px 0 0;
-                    padding: 9px;
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-
-                    svg path {
-                        transition: 0.3s;
-                    }
-
-                    &:hover svg path {
-                        fill: $accent-color;
-                    }
-                }
-
-                .product-slider__img {
-
-                    margin: 52px 0 14px 0;
-                    width: 200px;
-                    height: 200px;
-                }
-
-                .product-slider__name {
-                    width: 200px;
-                    text-align: center;
-                    margin-bottom: 25px;
-                    transition: .3s;
-                }
-
-                .product-slider__price {
-                    font-size: 22px;
-                    font-weight: 700;
-                    transition: .3s;
-
-                    &:after {
-                        content: " ₽";
-                        font-size: 30px;
-                        font-weight: 700;
-                    }
-                }
-
-                .product-slider__out {
-                    margin-bottom: 12px;
-                    font-size: 15px;
-                    font-weight: 700;
-                }
-
-                .product-slider__inform {
-                    font-size: 14px;
-                    color: $accent-color;
-                    border-bottom: 1px solid $accent-color;
-                }
-
-                .product-slider__btn-card {
-                    padding: 10px 16px 6px 14px;
-                    border-radius: 10px 0 0 0;
-                    position: absolute;
-                    bottom: 0;
-                    right: 0;
-                    background-color: $accent-color;
-                    transition: 0.3s;
-
-                    svg path {
-                        transition: 0.3s;
-                    }
-
-                    &:hover svg path {
-                        fill: $accent-color;
-                    }
-
-                    &:hover {
-                        background-color: white;
-                    }
-
-                }
-            }
-        }
+      .product-slider__item {
+        max-width: 90%;
+      }
     }
-
-
+  }
 }
