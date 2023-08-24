@@ -1,24 +1,20 @@
-'use strict';
-
 import gulp from 'gulp';
-const { series, parallel, src, dest, task, watch } = gulp;
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 import rigger from 'gulp-rigger';
 import imagemin from 'gulp-imagemin';
 
-
 function buildStyles() {
   return gulp.src('./src/scss/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./public/css'));
-};
+}
 
 function imageImport() {
-  gulp.src('./src/images/**/*')
+  return gulp.src('./src/images/**/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('./public/images'))
+    .pipe(gulp.dest('./public/images'));
 }
 
 function htmlImport() {
@@ -32,12 +28,13 @@ function jsImport() {
     .pipe(gulp.dest('./public/js'));
 }
 
-gulp.task('watch',
-  function () {
-    watch('./src/scss/**/*.scss', { ignoreInitial: false }, buildStyles);
-    watch('./src/scss/**/*.scss', { ignoreInitial: false }, buildStyles);
-    watch('./src/pages/**/*.html', { ignoreInitial: false }, htmlImport);
-    watch('./src/js/**/*.js', { ignoreInitial: false }, jsImport);
-    watch(['./src/images/**/*.svg', './src/images/**/*.png', './src/images/**/*.svg', './src/images/**/*.jpg'], { ignoreInitial: false }, imageImport);
-  }
-);
+function watchFiles() {
+  gulp.watch('./src/scss/**/*.scss', buildStyles);
+  gulp.watch('./src/pages/**/*.html', htmlImport);
+  gulp.watch('./src/js/**/*.js', jsImport);
+  gulp.watch(['./src/images/**/*.svg', './src/images/**/*.png', './src/images/**/*.svg', './src/images/**/*.jpg'], imageImport);
+}
+
+export const build = gulp.series(buildStyles, gulp.parallel(htmlImport, jsImport, imageImport));
+export const watch = gulp.series(build, watchFiles);
+export default build;
