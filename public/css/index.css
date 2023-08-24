@@ -4,7 +4,7 @@
   font-style: normal;
   font-weight: 700;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBOLD.OTF")
       format("opentype");
 }
 @font-face {
@@ -12,7 +12,7 @@
   font-style: italic;
   font-weight: 900;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBLACKITALIC.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYBLACKITALIC.OTF")
       format("opentype");
 }
 @font-face {
@@ -20,7 +20,7 @@
   font-style: italic;
   font-weight: 300;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYLIGHTITALIC.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYLIGHTITALIC.OTF")
       format("opentype");
 }
 @font-face {
@@ -28,7 +28,7 @@
   font-style: normal;
   font-weight: 500;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYMEDIUM.OTF")
       format("opentype");
 }
 @font-face {
@@ -36,7 +36,7 @@
   font-style: normal;
   font-weight: 400;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYREGULAR.OTF")
       format("opentype");
 }
 @font-face {
@@ -44,7 +44,7 @@
   font-style: italic;
   font-weight: 700;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYSEMIBOLDITALIC.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYSEMIBOLDITALIC.OTF")
       format("opentype");
 }
 @font-face {
@@ -52,7 +52,7 @@
   font-style: italic;
   font-weight: 100;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYTHINITALIC.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYTHINITALIC.OTF")
       format("opentype");
 }
 @font-face {
@@ -60,7 +60,7 @@
   font-style: italic;
   font-weight: 200;
   src: local("Roboto"),
-    url("/public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYULTRALIGHTITALIC.OTF")
+    url("./public/fonts/sf-pro-display-cufonfonts/SFPRODISPLAYULTRALIGHTITALIC.OTF")
       format("opentype");
 }
 a {
