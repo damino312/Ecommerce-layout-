@@ -1,5 +1,5 @@
-# Gidrotsikly
-Shop layout
+# Гидроциклы
+Ecommerce layout
 SASS, GULP, BEM, VANILLA JS
 
 link - https://www.figma.com/file/Z3LcPSIhWZiGTJ2b4mYbUP/gidrotsikly-%2B-(Copy)?node-id=0-1
